@@ -78,27 +78,27 @@ namespace ConsoleApp4
         //    }
         //    return Sum;
         //}
-        //static int SumArray(ref int[] Arr)
+        static int SumArray(ref int[] Arr)
+        {
+            int Sum = 0;
+            Arr[0] = 100;
+            for (int i = 0; i < Arr.Length; i++)
+            {
+                Sum += Arr[i];
+            }
+            return Sum;
+        }
+        //static int SumArray(int[] Arr)
         //{
         //    int Sum = 0;
-        //    Arr[0] = 100;
+        //    Arr = new int[] { 10, 20, 30 };
         //    for (int i = 0; i < Arr.Length; i++)
         //    {
         //        Sum += Arr[i];
         //    }
         //    return Sum;
         //}
-        //static int SumArray( int[] Arr)
-        //{
-        //    int Sum = 0;
-        //    Arr = new int[] {10,20,30};
-        //    for (int i = 0; i < Arr.Length; i++)
-        //    {
-        //        Sum += Arr[i];
-        //    }
-        //    return Sum;
-        //}
-     
+
         static void Main(string[] args)
         {
             #region 1D ARRAY
@@ -262,10 +262,10 @@ namespace ConsoleApp4
             //Console.WriteLine(Numbers[0]); // 1
             // Ref
 
-            //int[] Numbers = { 1, 2, 3 };
-            //int result = SumArray(ref Numbers);
-            //Console.WriteLine(result);  // 60
-            //Console.WriteLine(Numbers[0]); //10 
+            int[] Numbers = { 1, 2, 3 };
+            int result = SumArray(ref Numbers);
+            Console.WriteLine(result);  // 60
+            Console.WriteLine(Numbers[0]); //10 
             #endregion
 
         }
